@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="UserViewController" customModule="GithubUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GithubUser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csD-pf-Ahq">
+                                <rect key="frame" x="0.0" y="54" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type the user to search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4SN-BR-qNK">
+                                <rect key="frame" x="10" y="120" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="VYC-Lo-n4O"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gHy-Qj-9JR">
+                                <rect key="frame" x="10" y="180" width="394" height="682"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6R-TV-CEw">
+                                <rect key="frame" x="354" y="125" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="9l4-bu-shC"/>
+                                    <constraint firstAttribute="height" constant="30" id="oQz-s1-2UH"/>
+                                </constraints>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fPP-Ry-bPI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gHy-Qj-9JR" secondAttribute="trailing" constant="10" id="CAa-92-ViF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="csD-pf-Ahq" secondAttribute="trailing" id="Ese-n5-ttm"/>
+                            <constraint firstItem="4SN-BR-qNK" firstAttribute="top" secondItem="csD-pf-Ahq" secondAttribute="bottom" constant="30" id="Gdx-eU-bq3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i6R-TV-CEw" secondAttribute="trailing" constant="10" id="ONY-h4-S22"/>
+                            <constraint firstItem="i6R-TV-CEw" firstAttribute="centerY" secondItem="4SN-BR-qNK" secondAttribute="centerY" id="PbB-2s-O01"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gHy-Qj-9JR" secondAttribute="bottom" id="Xd3-a7-gfL"/>
+                            <constraint firstItem="i6R-TV-CEw" firstAttribute="leading" secondItem="4SN-BR-qNK" secondAttribute="trailing" constant="10" id="cTF-ji-IHa"/>
+                            <constraint firstItem="csD-pf-Ahq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="fPj-my-HLd"/>
+                            <constraint firstItem="gHy-Qj-9JR" firstAttribute="top" secondItem="4SN-BR-qNK" secondAttribute="bottom" constant="20" id="r2l-kP-ggG"/>
+                            <constraint firstItem="csD-pf-Ahq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rP4-xr-QBQ"/>
+                            <constraint firstItem="gHy-Qj-9JR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="szF-E9-fUs"/>
+                            <constraint firstItem="4SN-BR-qNK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="yeD-TA-OEh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultUserTableView" destination="gHy-Qj-9JR" id="dS2-5G-Q5a"/>
+                        <outlet property="searchUserTextField" destination="4SN-BR-qNK" id="izz-37-1RX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.710144927536234" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>
