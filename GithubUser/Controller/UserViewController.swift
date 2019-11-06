@@ -41,10 +41,10 @@ class UserViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         // use searchUserTextField.text to get the user
-        searchUserTextField.text = ""
         if let user = searchUserTextField.text {
             userManager.fetchUser(userName: user)
         }
+        searchUserTextField.text = ""
     }
 }
 
