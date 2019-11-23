@@ -11,7 +11,11 @@ import UIKit
 class UserViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var searchUserTextField: UITextField!
-    @IBOutlet weak var resultUserTableView: UITableView!
+    @IBOutlet weak var resultUserTableView: UITableView! {
+        didSet {
+            resultUserTableView.registerXibCell
+        }
+    }
     
     var userManager = UserManager()
     

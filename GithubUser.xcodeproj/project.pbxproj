@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,10 @@
 		9578D9E62371A84B007D9690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9578D9E42371A84B007D9690 /* LaunchScreen.storyboard */; };
 		9578D9F02371ABD3007D9690 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578D9EF2371ABD3007D9690 /* UserManager.swift */; };
 		95BE9BBC2372F74100B38C31 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BE9BBB2372F74100B38C31 /* UserData.swift */; };
+		95BE9BBE2388C60C00B38C31 /* UserInfoCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BE9BBD2388C60C00B38C31 /* UserInfoCellViewController.swift */; };
+		95BE9BC02388C68000B38C31 /* UserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BE9BBF2388C68000B38C31 /* UserInfoCell.xib */; };
+		95BE9BC22388D18700B38C31 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BE9BC12388D18700B38C31 /* UITableViewExtension.swift */; };
+		95BE9BC72388D42C00B38C31 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BE9BC62388D42C00B38C31 /* UITableViewCellExtension.swift */; };
 		FCBFC548113CF54DA43D1E71 /* Pods_GithubUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9610786C0D880DC18940DDCE /* Pods_GithubUser.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +32,10 @@
 		9578D9E72371A84B007D9690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9578D9EF2371ABD3007D9690 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		95BE9BBB2372F74100B38C31 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		95BE9BBD2388C60C00B38C31 /* UserInfoCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCellViewController.swift; sourceTree = "<group>"; };
+		95BE9BBF2388C68000B38C31 /* UserInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoCell.xib; sourceTree = "<group>"; };
+		95BE9BC12388D18700B38C31 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		95BE9BC62388D42C00B38C31 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		9610786C0D880DC18940DDCE /* Pods_GithubUser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubUser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA1C48357F662223528BBD5E /* Pods-GithubUser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUser.release.xcconfig"; path = "Target Support Files/Pods-GithubUser/Pods-GithubUser.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +58,7 @@
 				9610786C0D880DC18940DDCE /* Pods_GithubUser.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9578D9CF2371A847007D9690 = {
@@ -58,7 +67,6 @@
 				9578D9DA2371A847007D9690 /* GithubUser */,
 				9578D9D92371A847007D9690 /* Products */,
 				A498D89E3C0470041D351BA0 /* Pods */,
-				5E0948BF51566404CE69A954 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,7 +87,9 @@
 				9578D9EE2371AB8B007D9690 /* Controller */,
 				9578D9E22371A84B007D9690 /* Assets.xcassets */,
 				9578D9E42371A84B007D9690 /* LaunchScreen.storyboard */,
+				5E0948BF51566404CE69A954 /* Frameworks */,
 				9578D9E72371A84B007D9690 /* Info.plist */,
+				95BE9BC52388D19D00B38C31 /* Extension */,
 			);
 			path = GithubUser;
 			sourceTree = "<group>";
@@ -88,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				9578D9DF2371A847007D9690 /* Main.storyboard */,
+				95BE9BBF2388C68000B38C31 /* UserInfoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				9578D9DD2371A847007D9690 /* UserViewController.swift */,
+				95BE9BBD2388C60C00B38C31 /* UserInfoCellViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -109,13 +121,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		95BE9BC52388D19D00B38C31 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				95BE9BC12388D18700B38C31 /* UITableViewExtension.swift */,
+				95BE9BC62388D42C00B38C31 /* UITableViewCellExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		A498D89E3C0470041D351BA0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				7886E3D3F681502866CF62EE /* Pods-GithubUser.debug.xcconfig */,
 				DA1C48357F662223528BBD5E /* Pods-GithubUser.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -179,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BE9BC02388C68000B38C31 /* UserInfoCell.xib in Resources */,
 				9578D9E62371A84B007D9690 /* LaunchScreen.storyboard in Resources */,
 				9578D9E32371A84B007D9690 /* Assets.xcassets in Resources */,
 				9578D9E12371A847007D9690 /* Main.storyboard in Resources */,
@@ -235,7 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9578D9F02371ABD3007D9690 /* UserManager.swift in Sources */,
+				95BE9BBE2388C60C00B38C31 /* UserInfoCellViewController.swift in Sources */,
 				9578D9DE2371A847007D9690 /* UserViewController.swift in Sources */,
+				95BE9BC22388D18700B38C31 /* UITableViewExtension.swift in Sources */,
+				95BE9BC72388D42C00B38C31 /* UITableViewCellExtension.swift in Sources */,
 				95BE9BBC2372F74100B38C31 /* UserData.swift in Sources */,
 				9578D9DC2371A847007D9690 /* AppDelegate.swift in Sources */,
 			);
