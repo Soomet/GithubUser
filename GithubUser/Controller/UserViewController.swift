@@ -13,7 +13,7 @@ class UserViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var searchUserTextField: UITextField!
     @IBOutlet weak var resultUserTableView: UITableView! {
         didSet {
-            resultUserTableView.registerXibCell
+            //resultUserTableView.registerXibCell
         }
     }
     
